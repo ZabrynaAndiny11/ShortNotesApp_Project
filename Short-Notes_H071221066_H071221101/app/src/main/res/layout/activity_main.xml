@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/note_home">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Short Notes App"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#91aeca"/>
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="Note Title"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_bg"/>
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="10dp"
+        android:hint="Note Content"
+        android:textColor="@color/black"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:background="@drawable/edittext_bg"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Save Notes"
+        android:backgroundTint="#91aeca"/>
+
+    <TextView
+        android:id="@+id/notesTextView"
+        android:layout_width="350dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Notes :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#5f84a2"/>
+
+
+
+
+
+
+
+    //===========================================
+
+    <TextView
+        android:id="@+id/deleteTextView"
+        android:layout_width="170dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="10dp"
+        android:text="Long Press to delete :"
+        android:textColor="#5f84a2"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/notesScrollView"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/notesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"/>
+    </ScrollView>
+</LinearLayout>
